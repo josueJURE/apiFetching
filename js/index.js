@@ -5,6 +5,7 @@ btn.addEventListener("click", function(){
     async function getData() {
       const response = await fetch(url);
       const data = await response.json();
+      document.getElementById("result").innerHTML = data.latitude
       console.log(data.latitude);
     }
     getData();
